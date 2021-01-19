@@ -110,7 +110,6 @@ class TestBaseballGame(unittest.TestCase):
         for x in range(2000):
             with patch('builtins.input', side_effect=["0"]):
                 with patch('sys.stdout', new=StringIO()) as fakeOutput:
-                    print(fakeOutput)
                     bg.main()
                     console = fakeOutput.getvalue().strip().split("\n")
 
