@@ -272,11 +272,13 @@ def main():
                     break
                 print('Wrong Input, Input again')
             if zero_in:
-                break
+                return
             strike, ball = get_strikes_or_ball(user_input,random_number)
             print(f'Strikes : {strike} , Balls : {ball}')
         while True:
             replay = input('You win, one more (Y/N) ?')
+            if replay == '0':
+                return
             if is_no(replay):
                 play = False
                 break
