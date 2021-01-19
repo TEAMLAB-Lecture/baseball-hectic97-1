@@ -264,6 +264,8 @@ def main():
         while str(user_input) != random_number:
             while True:
                 user_input = input('Input guess number : ')
+                if user_input == '0':
+                    exit(0)
                 if is_validated_number(user_input):
                     break
                 print('Wrong Input, Input again')
