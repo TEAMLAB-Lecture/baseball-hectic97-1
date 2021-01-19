@@ -261,7 +261,7 @@ def main():
         print("Random Number is : ", random_number)
         # ===Modify codes below=============
         # 위의 코드를 포함하여 자유로운 수정이 가능함
-        while user_input != random_number:
+        while str(user_input) != random_number:
             while True:
                 user_input = input('Input guess number : ')
                 if is_validated_number(user_input):

@@ -110,8 +110,10 @@ class TestBaseballGame(unittest.TestCase):
         for x in range(2000):
             with patch('builtins.input', side_effect=["0"]):
                 with patch('sys.stdout', new=StringIO()) as fakeOutput:
+                    print(fakeOutput)
                     bg.main()
                     console = fakeOutput.getvalue().strip().split("\n")
+
                     random_number = console[1][-3:].strip()
                     self.assertFalse(
                         self.is_duplicated_number(random_number))
